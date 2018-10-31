@@ -1,0 +1,98 @@
+/*---------- Primary Buttons and Liks ---------*/
+$primary : #f36f5e;
+$btn-blue-hover: #066dc4;
+$second-primary: #4174af;
+$second-primary-hover: #245a99;
+
+$btn-primary : #f36f5e;
+$btn-primary-hover : #ec5844;
+
+$body-bg: #484949;
+$link-color :#065db7;
+$search-input : #f4f3f3;
+
+$light-blue: #5da2ad;
+$light-blue1: #d7e1e7;
+$light-blue2: #5bc7ca;
+
+$dark-blue : #4f8cae;
+$dark-blue1 : #336d8d;
+$welcome-dropdown: #2e7bc1;
+
+$color-white: #fff;
+$grey-light : #b0b0b0;
+$light-grey1: #f2f2f2;
+$light-grey2: #ddd;
+
+$dark-grey : #333;
+$dark-grey1 : #666;
+$dark-grey2 : #999;
+$table-tr-even: #f9f7f7;
+
+
+/*----------------- Mixins -----------------*/
+
+/*------- Text Ellipsis  -------*/
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /*------- Border Radius  -------*/
+  @mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+            border-radius: $radius;
+  }
+  
+  @mixin border-top-left-radius ($radius){
+    -webkit-border-top-left-radius: $radius;
+       -moz-border-top-left-radius: $radius;
+            border-top-left-radius: $radius;
+  }
+  @mixin border-top-right-radius ($radius){
+    -webkit-border-top-right-radius: $radius;
+       -moz-border-top-right-radius: $radius;
+            border-top-right-radius: $radius;
+  }
+  @mixin border-bottom-left-radius ($radius){
+    -webkit-border-bottom-left-radius: $radius;
+       -moz-border-bottom-left-radius: $radius;
+            border-bottom-left-radius: $radius;
+  }
+  @mixin border-bottom-right-radius ($radius){
+    -webkit-border-bottom-right-radius: $radius;
+       -moz-border-bottom-right-radius: $radius;
+            border-bottom-right-radius: $radius;
+  }
+  
+  /*------- Clear Fix Both  -------*/
+  @mixin clearfix {
+    &:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+    * html & { height: 1px }
+  }
+  
+  
+  /*------- Box Shadow -------*/
+  @mixin box-shadow($shadows...) {
+    -moz-box-shadow: $shadows;
+    -webkit-box-shadow: $shadows;
+    box-shadow: $shadows;
+  }
+  
+  /*------- Text Shadow -------*/
+  @mixin text-shadow ($string: 0 1px 3px rgba(0, 0, 0, 0.2)) {
+    text-shadow: $string;
+  }
+  
+  /*------- Word Break -------*/
+  @mixin word-wrap {
+    word-wrap: break-word;
+  }
